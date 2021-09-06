@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="50px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:text="Girdiğiniz bilgiler daha sonra güncellenemez. Lütfen bilgilerin doğruluğundan emin olarak devam edin."
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/validateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rounded_square_background"
+            android:text="Bilgilerim doğru"
+            android:textAllCaps="false"
+            android:textColor="#81195C" />
+
+        <TextView android:id="@+id/returnBtn"
+            android:textSize="14dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:text="Geri Dön"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

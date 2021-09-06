@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.VideosFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/videoPrepLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F5F5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Video Çek"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <ImageView android:id="@+id/exit"
+                android:src="@drawable/ic_baseline_clear_24"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/ready"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textSize="18sp"
+                android:text="@string/be_sure"
+                android:textAlignment="center" />
+
+            <CheckBox android:id="@+id/prep1"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:text="Siyah çarşaf serdim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/prep2"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:text="Bebeğin kıyafetlerini çıkardım"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/prep3"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:text="Kamerayı bebeğin tüm vücudunu çekecek şekilde ayarladım"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ready"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/rounded_square_background"
+            android:text="Hazırım"
+            android:textAllCaps="false"
+            android:textColor="#C66AA5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/videosLayout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F5F5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Videolar"
+                android:textAlignment="center"
+                android:textColor="#4E4E4E"
+                android:textSize="25sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recyclerVideosLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/reCapture"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="20dp"
+                tools:itemCount="3"
+                tools:listitem="@layout/video_item" />
+
+            <Button
+                android:id="@+id/reCapture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginBottom="44dp"
+                android:background="@drawable/rounded_square_background"
+                android:text="Yeni Video Çek"
+                android:textAllCaps="false"
+                android:textColor="#B53386"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout android:id="@+id/emptyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/ic_baseline_mood_bad_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/no_video"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/capture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_square_background"
+                android:text="Video Çek"
+                android:textAllCaps="false"
+                android:textColor="#B53386" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

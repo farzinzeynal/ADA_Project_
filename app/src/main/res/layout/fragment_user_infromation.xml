@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.UserInfromation">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView android:id="@+id/txtLabel"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:text="@string/l_tfen_ocu_unuzun_bilgilerini_girin"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtLabel">
+
+                <TextView
+                    android:text="@string/sim_soyisim"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText android:id="@+id/fullName"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rounded_square_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="@string/beklenen_do_um_tarihi"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/expectedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_square_background"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_date"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:text="@string/birth_date"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/birthDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_square_background"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_date"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/do_um_kilosu"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/birthWeight"
+                        android:textStyle="italic"
+                        android:textAlignment="textEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <EditText android:id="@+id/birthWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:background="@drawable/rounded_square_background"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:text="@string/sex"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <RadioGroup android:id="@+id/radGr"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton android:id="@+id/girlRB"
+                        android:text="Kız"
+
+                        android:button="@null"
+                        android:drawableStart="@drawable/rb_selector"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioButton
+                        android:id="@+id/boyRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:button="@null"
+                        android:drawableStart="@drawable/rb_selector"
+                        android:padding="5dp"
+                        android:text="Erkek"
+                        android:theme="@style/RadioButtonStyle" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/ref_dr"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="(opsiyonel)"
+                        android:textStyle="italic"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <EditText android:id="@+id/refDr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_square_background"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"/>
+
+
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="@string/email_adr"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:text="* Raporu göndermek için gereklidir."
+                        android:textStyle="italic"
+                        android:textColor="#FF2785"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+
+                <EditText android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/rounded_square_background"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"/>
+
+                <CheckBox android:id="@+id/privacyPolicy"
+                    android:text="@string/accept_1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox android:id="@+id/reportPolicy"
+                    android:text="@string/paid_accept"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button android:id="@+id/nextBtn"
+                    android:background="@drawable/rounded_square_background"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:text="Devam Et"
+                    android:textAllCaps="false"
+                    android:textColor="#C66AA5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</FrameLayout>

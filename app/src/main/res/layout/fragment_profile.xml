@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="com.example.adaproject.models.response.UserInfoRes" />
+    </data>
+
+<FrameLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ProfileFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:background="#F5F5F5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView android:id="@+id/label"
+                android:textAlignment="center"
+                android:text="Profil"
+                android:textSize="25sp"
+                android:textColor="#4E4E4E"
+                android:layout_width="wrap_content"
+                android:layout_gravity = "center"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <LinearLayout
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button android:id="@+id/demandBtn"
+                        android:background="@drawable/rounded_square_background"
+                        android:theme="@style/ButtonStyle"
+                        android:layout_marginTop="20dp"
+                        android:text="Rapor Talep Et"
+                        android:textAllCaps="false"
+                        android:clickable="false"
+                        android:textColor="#ca8c9f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@string/demand_report"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#333333"
+                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#fff6f8 ">
+
+                    <LinearLayout
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#475259"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="İsim Soyisim" />
+                            <TextView android:id="@+id/fullName"
+                                android:text="@{user.child.name}"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#475259"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Beklenen Doğum Tarihi" />
+                            <TextView android:id="@+id/expectedDate"
+                                android:text="@{user.child.estimatedBirthDate}"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#475259"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gerçek Doğum Tarihi" />
+                            <TextView android:id="@+id/birthDate"
+                                android:text="@{user.child.realBirthDate}"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#475259"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Doğum Kilosu" />
+                            <TextView android:id="@+id/birthWeight"
+                                android:text="@{String.valueOf(user.child.grams)}"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#475259"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Cinsiyet" />
+                            <TextView android:id="@+id/sexuality"
+                                android:text="@{user.child.sexuality}"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="#475259"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Email Adresi" />
+                            <TextView android:id="@+id/email"
+                                android:text="@{user.email}"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Bilgilerde hata olduğunu düşünüyorsanız, bize ulaşabilirsiniz." />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:text="Bize ulaşın"
+                        android:layout_weight="1"
+                        android:textColor="#9c244a"
+                        android:background="@drawable/round_button_bg_red_stroke"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+</layout>

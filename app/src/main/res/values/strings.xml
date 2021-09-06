@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">ADA Project</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome"><b> Ada uygulamasına hoş geldiniz.</b> <br />
+        ADA\&apos;yı kullanabilmek için telefon numaranız ile giriş yapmanız gerekmektedir.</string>
+    <string name="telefonNum">Telefon Numaranızı Girin</string>
+    <string name="earlyAcces"> Kullanmakta olduğunuz sürüm erken aşama sürümüdür, geliştirmelerimiz devam etmektedir.</string>
+    <string name="about">Medikal Direktor Hakkında Bilgi</string>
+    <string name="privacy">Gizlilik Politikası</string>
+    <string name="instr">Kullanım Koşulları</string>
+    <string name="valcode">Doğrulama Kodu</string>
+    <string name="resend"><b>Tekrar Kod Gönder</b></string>
+    <string name="l_tfen_ocu_unuzun_bilgilerini_girin"><b>Lütfen çocuğunuzun bilgilerini girin.</b></string>
+    <string name="sim_soyisim">İsim Soyisim</string>
+    <string name="beklenen_do_um_tarihi">Beklenen Doğum Tarihi</string>
+    <string name="birth_date">Gerçek Doğum Tarihi</string>
+    <string name="do_um_kilosu">Doğum Kilosu</string>
+    <string name="birthWeight">(gram cinsinden girin ör: 3250)</string>
+    <string name="sex">Cinsiyyet</string>
+    <string name="ref_dr">Yönlendiren Doktor İsmi</string>
+    <string name="email_adr">Email Adresi</string>
+    <string name="accept_1" style="color:red;"><a href="">Gizlilik Politikasını ve Kullanım Koşullarını</a> <br></br>okudum, onaylıyorum.</string>
+    <string name="paid_accept">CP Ugulaması ücretli bir uygulamadır sizden kayıt sırasında ücret talep edilmez, sürecin sonunda rapor üretilmesi için XX TL ücret talep edilecektir, bu ücreti ödemeden rapor alamayacağım.</string>
+    <string name="no_video">Henüz hiç video çekmediniz.\nVideolarınız siz çektikten sonra burada görünür.</string>
+    <string name="be_sure">Lütfen aşağıdaki hazırlıkları yaptıktan sonra işaretleyip hazırıma basın</string>
+    <string name="demand_report">Rapor talep edebilmek için 14-22 hafta arasında 8 video (her hafta min 1 video olacak şekilde) yüklenmiş olması gerekmektedir.</string>
+
+</resources>
